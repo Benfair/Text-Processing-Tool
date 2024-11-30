@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="main.project.controller.DataController" spacing="10">
+    <Label text="Data Entry:" />
+    <TextField fx:id="inputField" promptText="Enter new data" />
+    <HBox spacing="10">
+        <Button text="Add" onAction="#handleAdd" />
+        <Button text="Update Selected" onAction="#handleUpdate"/>
+    </HBox>
+    <Label text="Collections:" />
+    <ListView fx:id="listView" prefHeight="200" />
+    <HBox spacing="10">
+        <Button text="Delete Selected" onAction="#handleDelete" />
+        <Button text="Clear All" onAction="#handleClear" />
+    </HBox>
+</VBox>

@@ -9,14 +9,19 @@ public class RegexUtility {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
 
-        boolean found = false;
+        int count = 0;
+        String match = null;
 
         while (matcher.find()) {
-            result.append(String.format("Match: %s at position [%d, %d]%n",
-                    matcher.group(), matcher.start(), matcher.end()));
-            found = true;
+            count++;
+            if (match == null) {
+                match = matcher.group();
+            }
         }
-        if (!found) {
+
+        if (count > 0) {
+            result.append(String.format("Match: %s\nTotal Match(es) Found: %d", match, count));
+        } else {
             result.append("No match found.");
         }
         return result.toString();

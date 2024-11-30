@@ -2,8 +2,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="main.project.controller.MainController" spacing="10">
-    <Label text="Text Processing Tool" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="main.project.controller.TextController" spacing="10">
     <Label text="Input:" />
     <TextArea fx:id="inputTextArea" promptText="Enter text here..." wrapText="true" prefHeight="200" />
 
